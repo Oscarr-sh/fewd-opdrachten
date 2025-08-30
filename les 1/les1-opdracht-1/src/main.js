@@ -1,4 +1,4 @@
-import './style.css'
+/* import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
@@ -22,3 +22,31 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+*/
+
+document.title = 'My Magical Home Page';
+
+const louisa = {
+  naam: 'Louisa',
+  age: 18,
+
+  pets: ['kat', 'vis', 'Pyro dragon'],
+
+  talk: function () {
+    console.log('Hallo ik ben ' + this.naam);
+    console.log('Ik ben ' + this.age + ' jaar oud');
+    console.log('Ik ben geboren in ' + this.getAge())
+
+        for (let i = 0; i < this.pets.length; i++) {
+      console.log('Ik heb een ' + this.pets[i]);
+    }
+  },
+
+    getAge: function () {
+    const currentYear = new Date().getFullYear();
+    return currentYear - this.age;
+  }
+};
+
+louisa.talk();
